@@ -2,12 +2,12 @@
 
 **Lab. Report \#5 – Software Reliability Assessment**
 
-| Group \#:       |   |
+| Group 22:       |   |
 |-----------------|---|
-| Student Names:  |   |
-|                 |   |
-|                 |   |
-|                 |   |
+| Student Names:  | Issy Gaudet         |
+|                 | Kamand Ghorbanzadeh |
+|                 | Spiro Douvis        |
+|                 | Dylan Wenaas        |
 
 # Introduction
 
@@ -76,11 +76,14 @@ In conclusion, while RDC offers a versatile, efficient, and cost-effective way t
 
 # How the team work/effort was divided and managed
 
-# 
+**Kamand and Spiro:** Kamand and Spiro collaborated on Part 1 of the lab, which focused on reliability growth testing using the C-SFRAT tool. We worked together to analyze the failure data, create the required plots for MTTFmin, twice MTTFmin, and half MTTFmin, and evaluate the failure rate and reliability of the SUT. We also contributed to the discussion on the advantages and disadvantages of reliability growth testing and documented the decision-making process for selecting the appropriate models.
+
+**Isabelle and Dylan:** Isabelle and Dylan worked on Part 2 of the lab, which involved using the Reliability Demonstration Chart (RDC) tool. We determined the MTTFmin through trial and error by adjusting the "Number of Input Events" and setting parameters such as the "Maximum Acceptable Number of Failures." We also created the required plots for MTTFmin, twice MTTFmin, and half MTTFmin, and analyzed the results. Additionally, we contributed to the discussion on the advantages and disadvantages of RDC and documented the challenges encountered during the process.
+
+**Team Collaboration:** The entire team collectively worked on the write-up for the lab report. This included comparing the results of Part 1 and Part 2, discussing the similarities and differences between the two techniques, and reflecting on the lessons learned during the lab. Regular meetings and discussions ensured that all sections were cohesive and well-structured. Each member reviewed the final document to ensure consistency, accuracy, and clarity.
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
 Determining the MTTFmin using the RDC-11 tool presented several challenges. The tool doesn’t allow for direct input of MTTFmin, so we had to use trial and error by adjusting the "Number of Input Events" to achieve a normalized usage unit close to our target. One difficulty was selecting the right parameters, such as setting the "Maximum Acceptable Number of Failures" to 5, which we felt was reasonable for evaluating reliability without overstretching the system’s limits. Refining the MTTFmin estimate was challenging as it required multiple iterations to find the optimal value, with 230 input events producing a normalized usage unit of approximately 46 seconds. Additionally, it was hard to determine the best estimate since the RDC-11 tool only provided a graph with color-coded regions and no specific values indicating how accurate or reliable the result was, making it difficult to assess the quality of our estimates directly.
-
 
 # Comments/feedback on the lab itself
