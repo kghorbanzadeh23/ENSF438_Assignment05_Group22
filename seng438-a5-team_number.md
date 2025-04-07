@@ -77,17 +77,17 @@ In conclusion, while RDC offers a versatile, efficient, and cost-effective way t
 Both reliability growth testing and reliability assessment using RDC are techniques used to evaluate the reliability of a SUT, and although they share some similarities, they differ significantly in their methodologies and applications.
 
 Similarities
-- Both techniques rely on failure times and the concept of MTTF to assess the system’s performance and reliability.
+- Both techniques use failure times and more specifically MTTF to assess the system’s performance and reliability.
 - Failure data is needed for both methods. The same dataset was used as input for both techniques in our testing process.
 - Both methods used to determine whether the system is becoming more reliable over time, either through improved failure trends or a longer MTTF.
-- Each method requires tools and analysis techniques. Reliability growth testing involves statistical modeling and trend analysis, RDC uses graphical interpretation through tools like RDC-11.
+- Both methods requires tools and analysis techniques. Reliability growth testing uses statistical modeling and trend analysis, RDC uses graphical interpretation through tools like RDC-11.
 
 Differences
-- The data collection approach is different. In reliability growth testing, failures are continuously monitored and recorded as they occur. For RDC, failure data is collected at predefined intervals.
+- The data collection approach is different. In reliability growth testing, failures are continuously monitored and recorded as they occur but for RDC failure data is collected at predefined intervals.
 - The analysis method. Reliability growth testing focuses on viewing trends and patterns in failure rates using statistical models, RDC involves plotting cumulative failures against normalized input events to determine if the system falls in the Accept, Reject, or Continue Testing regions.
-- In reliability growth testing, both failure counts and inter-failure times are considered to analyze trends over time. RDC mainly focuses on inter-failure times to assess reliability at specific checkpoints.
-- Reliability growth testing is more data-intensive and often part of a continuous improvement process. It helps identify and address reliability issues as they appear RDC is simpler and just provides a pass/fail type decision based on limited failure data.
-- Part 1 (growth testing) focuses on predicting reliability trends, whereas Part 2 (RDC) focuses on determining whether the system meets a specific reliability requirement at a point in time.
+- In reliability growth testing, both failure counts and inter-failure times are considered to analyze trends over time but RDC focuses on inter-failure times to assess reliability at specific checkpoints.
+- Reliability growth testing is more data-intensive and often part of a continuous improvement process, it helps identify and address reliability issues as they appear, RDC is simpler and provides just a pass/fail type decision based on limited failure data.
+- Growth testing focuses on predicting reliability trends, and RDC focuses on determining whether the system meets a specific reliability requirement at a point in time.
 
 # How the team work/effort was divided and managed
 
@@ -99,6 +99,6 @@ Differences
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
-Determining the MTTFmin using the RDC-11 tool presented several challenges. The tool doesn’t allow for direct input of MTTFmin, so we had to use trial and error by adjusting the "Number of Input Events" to achieve a normalized usage unit close to our target. One difficulty was selecting the right parameters, such as setting the "Maximum Acceptable Number of Failures" to 5, which we felt was reasonable for evaluating reliability without overstretching the system’s limits. Refining the MTTFmin estimate was challenging as it required multiple iterations to find the optimal value, with 230 input events producing a normalized usage unit of approximately 46 seconds. Additionally, it was hard to determine the best estimate since the RDC-11 tool only provided a graph with color-coded regions and no specific values indicating how accurate or reliable the result was, making it difficult to assess the quality of our estimates directly.
+Determining the MTTFmin using the RDC-11 tool had several challenges. The tool doesn’t allow for direct input of MTTFmin, so we had to use trial and error by adjusting the "Number of Input Events" to achieve a normalized usage unit close to our target. One difficulty was selecting the right parameters, such as setting the "Maximum Acceptable Number of Failures" to 5, which we felt was a reasonable value for evaluating reliability without pushing the system’s limits. Refining the MTTFmin estimate was challenging as it required multiple iterations to find the optimal value, with 230 input events producing a normalized usage unit of approximately 46 seconds. It was also hard to determine the best estimate/when to stop since the RDC-11 tool only provides a graph with color coded regions and gives no specific values indicating how accurate or reliable the result was, making it difficult to know how good our estimates were compared to eachother.
 
 # Comments/feedback on the lab itself
