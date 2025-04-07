@@ -74,6 +74,21 @@ In conclusion, while RDC offers a versatile, efficient, and cost-effective way t
 
 # Discussion on Similarity and Differences of the Two Techniques
 
+Both reliability growth testing and reliability assessment using RDC are techniques used to evaluate the reliability of a SUT, and although they share some similarities, they differ significantly in their methodologies and applications.
+
+Similarities
+- Both techniques rely on failure times and the concept of MTTF to assess the system’s performance and reliability.
+- Failure data is needed for both methods. The same dataset was used as input for both techniques in our testing process.
+- Both methods used to determine whether the system is becoming more reliable over time, either through improved failure trends or a longer MTTF.
+- Each method requires tools and analysis techniques. Reliability growth testing involves statistical modeling and trend analysis, RDC uses graphical interpretation through tools like RDC-11.
+
+Differences
+- The data collection approach is different. In reliability growth testing, failures are continuously monitored and recorded as they occur. For RDC, failure data is collected at predefined intervals.
+- The analysis method. Reliability growth testing focuses on viewing trends and patterns in failure rates using statistical models, RDC involves plotting cumulative failures against normalized input events to determine if the system falls in the Accept, Reject, or Continue Testing regions.
+- In reliability growth testing, both failure counts and inter-failure times are considered to analyze trends over time. RDC mainly focuses on inter-failure times to assess reliability at specific checkpoints.
+- Reliability growth testing is more data-intensive and often part of a continuous improvement process. It helps identify and address reliability issues as they appear RDC is simpler and just provides a pass/fail type decision based on limited failure data.
+- Part 1 (growth testing) focuses on predicting reliability trends, whereas Part 2 (RDC) focuses on determining whether the system meets a specific reliability requirement at a point in time.
+
 # How the team work/effort was divided and managed
 
 **Kamand and Spiro:** Kamand and Spiro collaborated on Part 1 of the lab, which focused on reliability growth testing using the C-SFRAT tool. We worked together to analyze the failure data, create the required plots for MTTFmin, twice MTTFmin, and half MTTFmin, and evaluate the failure rate and reliability of the SUT. We also contributed to the discussion on the advantages and disadvantages of reliability growth testing and documented the decision-making process for selecting the appropriate models.
