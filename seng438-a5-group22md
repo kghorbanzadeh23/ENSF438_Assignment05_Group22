@@ -17,21 +17,71 @@ The primary goal of this lab was to introduce us to reliability assessment and d
 
 ## Result of model comparison (selecting top two models)
 
-In this part of the lab assignment, we were tasked with selecting the two best-fitting models based on the provided failure data. One major advantage of using C-SFRAT was its ability to easily import the CSV file into its GUI, allowing us to utilize built-in functions to identify which models best matched our data. The "Model Results and Predictions" feature was particularly useful in helping us determine which functions closely aligned with the failure patterns. To identify the best two models, we ran all possible comparisons using the available covariates. This allowed us to evaluate and compare multiple models to find the ones that best fit the failure data.
+In this section of the lab assignment, we had to select the best two models using the failure data provided to us the benefit of using the C-SFRAT was that we could simply import the CSV file into this GUI and we could use the functions to determine which fits in well with our data, this feature of Model Results and Predictions it will enable us to narrow which function resembles the closest to the failure data. To approach finding the best two models we select all the possible comparisons we could perform with the covariates. Here we can see all of the models which were selected to see which one would fit the best into our failure data.
 
 ![alt text](images\image-3.png)
-This graph was seen in the Data Upload and Model Selection tab of C-SFRAT.
+To compare these models we selected the Model Comparison tab to present us with a table of all the models, in which we could select the top two models easily.
 
-Then we selected all the models listed out under the Select Hazard Functions to produce the graph below:
 ![alt text](images\image-4.png)
-In the Model Results and Predictions tab, we can view all the models that we selected for our failure data to see which of the models best fit with the graph generated from the failure data.
-
 ![alt text](images\image-5.png)
-In the Model Comparison tab, all the data from the selected models was displayed in a table. By clicking on the column headers, we could sort the table in ascending order, allowing us to easily identify which models best matched our failure dataset's graph. We focused on finding the highest log-likelihood value and the lowest AIC score. Based on these criteria, we determined that the NB2 model was the best fit for our dataset. All variations of the NB2 model aligned perfectly with the graph, regardless of the covariates used, as the SSE (Sum of Squared Errors) was 0.
+After analyzing the table, we selected our best-fit models based on log-likelihood values, which reflect how closely a model fits the failure data. A higher (less negative) log-likelihood indicates a better fit. We also considered AIC, BIC, SSE, and Critic scores to support our selection.
+
+**Our two best fit candidates are:**
+
+- Model TL with covariates F, C (Row 57)
+
+- Model GM with covariates F, C (Row 41)
+
+**Both of these models demonstrated:**
+
+- The highest log-likelihood values among all models (−59.653), suggesting they align well with the observed data.
+
+- Low AIC and BIC scores, which indicate a good fit with minimal complexity.
+
+- Strong Critic (Mean and Median) scores close to 1.000, meaning excellent predictive performance.
+
+- Relatively low SSE and PSSE, indicating small prediction errors.
+
+These models use covariates F and C, which may contribute significantly to the failure behavior. Therefore, TL and GM models provide the most reliable statistical representation of our failure dataset.
+
+## Result of range analysis (an explanation of which part of the data is good for proceeding with the analysis)
+
+In our range analysis, we focused on identifying which portion of the failure data would be most appropriate for model fitting. This involved evaluating how well different models captured the behavior of the failure events across the observed time intervals. We used log-likelihood values as our primary indicator of model performance, aiming to find models that closely fit the failure data. The two models with the highest log-likelihoods—Model TL with covariates F, C and Model GM with covariates F, C (both with a log-likelihood of -59.653)—emerged as the best fits. These models not only align well with the failure distribution but also maintain strong performance in other metrics like AIC, BIC, SSE, and Critic scores. In terms of data range, the dataset included 31 intervals, which represent the number of observed failure events over time. This range allowed us to observe a consistent pattern in the failure rates, providing a stable basis for statistical modeling. The distribution within these 31 intervals appeared to be dense and informative enough for the TL and GM models to capture the underlying failure behavior effectively. Therefore, the range of data used was both statistically sufficient and relevant for conducting meaningful reliability analysis.
+
+## Plots for failure rate and reliability of SUT for the test data provided 
+MVF Graph for Model 1:
+![alt text](images\image-6.png)
+
+Intensity Graph for Model 1:
 ![alt text](images\image-7.png)
 
-![alt text](images\image-6.png)
-The graph above is the Failure Intensity graph that was created after selecting all the models.
+MVF Graph for Model 2:
+![alt text](images\image-8.png)
+
+Intensity Graph for Model 2:
+![alt text](images\image-9.png)
+
+Reliability Graph Prediction (SRTAT):
+
+Reliability Graph Prediction (C-SFRAT):
+
+## A discussion on decision making given a target failure rate 
+To determine the target failure rate, we utilized the C-SFRAT tool to help predict new testing intervals, and also incorporated the SRTAT tool to estimate the failure rate based on the observed number of failures in our dataset. Using both tools, we calculated the failure rate by dividing the number of failures by the total system operating hours. This metric was essential in assessing how much improvement is needed in the testing process to reduce the failure rate, thereby ensuring greater reliability once the system is deployed to end-users. Our objective was to establish the lowest achievable failure rate to confirm that the reliability of the failure data does not indicate any critical safety risks. Based on predictions from both tools and the intensity graphs referenced earlier, we set a target failure rate of 0.4, which represented the lowest intensity level within the relevant intervals for both top-performing models. With this target in mind, the failure data is expected to reflect a system that performs reliably under testing conditions.
+
+## A discussion on the advantages and disadvantages of reliability growth analysis 
+
+**Advantages:**
+
+- The graphs produced by a reliability growth analysis show any time-dependent trends, allowing us to make decisions based on past behavior and predict how our data will behave in the future.
+- It is easy to determine and examine the changes at a specific point in time from the results of a reliability growth analysis therefore determine and examine the impact that those changes in the development of the project.
+
+**Disadvantages:**
+
+- It is very tedious to create these graphs to analyze the reliability of a system under the test.
+- Using different tools with the same data brings on different results for the graphs.
+- The prediction models can differ based on the mathematical functions used in determining a target failure for the system.
+- Failure data entry into the Excel files can take a long time to input into the tools for example using the C-SFRAT we had to input the failure data into the Excel file that was already done for us beforehand.
+
 # Assessment Using Reliability Demonstration Chart 
 
 ## 3 plots for MTTFmin, twice and half of it for your test data
