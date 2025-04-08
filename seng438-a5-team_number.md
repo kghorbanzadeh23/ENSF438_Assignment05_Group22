@@ -16,31 +16,31 @@ The main purpose of this lab was to help us discover the reliability assessment 
 # Assessment Using Reliability Growth Testing 
 From the available options, we chose C-SFRAT as our testing tool. By following the instructions provided in the lab report, we successfully set up C-SFRAT. To load a failure dataset into the tool, we modified the data accordingly. Since C-SFRAT requires a .csv format, we transferred the information from Failure Report 3 (originally a Word document) into a .csv file and updated the column headings to match the required format. Once the .csv file was prepared, we imported it into C-SFRAT, resulting in the following graph:
 
-![alt text](images\image-3.png)
+![alt text](images/image-3.png)
 This graph was seen in the Data Upload and Model Selection tab of C-SFRAT.
 
 Then we selected all the models listed out under the Select Hazard Functions to produce the graph below:
-![alt text](images\image-4.png)
+![alt text](images/image-4.png)
 In the Model Results and Predictions tab, we can view all the models that we selected for our failure data to see which of the models best fit with the graph generated from the failure data.
 
-![alt text](images\image-5.png)
+![alt text](images/image-5.png)
 In the Model Comparison tab, all the data from the selected models was displayed in a table. By clicking on the column headers, we could sort the table in ascending order, allowing us to easily identify which models best matched our failure dataset's graph. We focused on finding the highest log-likelihood value and the lowest AIC score. Based on these criteria, we determined that the NB2 model was the best fit for our dataset. All variations of the NB2 model aligned perfectly with the graph, regardless of the covariates used, as the SSE (Sum of Squared Errors) was 0.
-![alt text](images\image-7.png)
+![alt text](images/image-7.png)
 
-![alt text](images\image-6.png)
+![alt text](images/image-6.png)
 The graph above is the Failure Intensity graph that was created after selecting all the models.
 # Assessment Using Reliability Demonstration Chart 
 
 ## 3 plots for MTTFmin, twice and half of it for your test data
 
 ### RDC for MTTFmin
-![alt text](images\image.png)
+![alt text](images/image.png)
 
 ### RDC for twice MTTFmin
-![alt text](images\image-2.png)
+![alt text](images/image-2.png)
 
 ### RDC for half MTTFmin
-![alt text](images\image-1.png)
+![alt text](images/image-1.png)
 
 ## Explain your evaluation and justification of how you decide the MTTFmin
 
