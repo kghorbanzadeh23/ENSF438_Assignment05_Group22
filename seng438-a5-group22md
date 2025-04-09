@@ -78,7 +78,6 @@ To determine the target failure rate, we utilized the C-SFRAT tool to help predi
 
 **Disadvantages:**
 
-- It is very tedious to create these graphs to analyze the reliability of a system under the test.
 - Using different tools with the same data brings on different results for the graphs.
 - The prediction models can differ based on the mathematical functions used in determining a target failure for the system.
 - Failure data entry into the Excel files can take a long time to input into the tools for example using the C-SFRAT we had to input the failure data into the Excel file that was already done for us beforehand.
@@ -167,7 +166,7 @@ Differences
 
 # How the team work/effort was divided and managed
 
-**Kamand and Spiro:** Kamand and Spiro collaborated on Part 1 of the lab, which focused on reliability growth testing using the C-SFRAT tool. We worked together to analyze the failure data, create the required plots for MTTFmin, twice MTTFmin, and half MTTFmin, and evaluate the failure rate and reliability of the SUT. We also contributed to the discussion on the advantages and disadvantages of reliability growth testing and documented the decision-making process for selecting the appropriate models.
+**Kamand and Spiro:** Kamand and Spiro collaborated on Part 1 of the lab, which focused on reliability growth testing using the C-SFRAT tool. We worked together to analyze the failure data and found the two best models for our data inputs. It was the TL (F,C) and GM (F,C). We also contributed to the discussion on the advantages and disadvantages of reliability growth testing and documented the decision-making process for selecting the appropriate models.
 
 **Isabelle and Dylan:** Isabelle and Dylan worked on Part 2 of the lab, which involved using the Reliability Demonstration Chart (RDC) tool. We determined the MTTFmin through trial and error by adjusting the "Number of Input Events" and setting parameters such as the "Maximum Acceptable Number of Failures." We also created the required plots for MTTFmin, twice MTTFmin, and half MTTFmin, and analyzed the results. Additionally, we contributed to the discussion on the advantages and disadvantages of RDC and documented the challenges encountered during the process.
 
@@ -177,4 +176,7 @@ Differences
 
 Determining the MTTFmin using the RDC-11 tool had several challenges. The tool doesn’t allow for direct input of MTTFmin, so we had to use trial and error by adjusting the "Number of Input Events" to achieve a normalized usage unit close to our target. One difficulty was selecting the right parameters, such as setting the "Maximum Acceptable Number of Failures" to 5, which we felt was a reasonable value for evaluating reliability without pushing the system’s limits. Refining the MTTFmin estimate was challenging as it required multiple iterations to find the optimal value, with 230 input events producing a normalized usage unit of approximately 46 seconds. It was also hard to determine the best estimate/when to stop since the RDC-11 tool only provides a graph with color coded regions and gives no specific values indicating how accurate or reliable the result was, making it difficult to know how good our estimates were compared to eachother.
 
+Another challenge we faced during the lab was the incompatibility between the required software and macOS. This issue significantly affected our workflow, as only half of our group members were able to run the C-SFRAT software needed to visualize and analyze the data. As a result, it was difficult to collaborate efficiently. To address this limitation, we adopted a peer programming-style approach: the two group members with compatible systems handled data input and visualization using C-SFRAT, while the remaining members focused on analyzing and interpreting the output. This collaborative strategy allowed us to work around the software limitations and complete the lab effectively despite the technical constraints.
+
 # Comments/feedback on the lab itself
+To improve the overall experience and efficiency of future labs, it would be beneficial to ensure that all required software is compatible across different operating systems. This would help prevent the technical difficulties we encountered and make the lab more accessible to all students. Additionally, more detailed instructions and guidance on how to use the tools and interpret their outputs would have been extremely helpful. Learning a new tool without proper support is both challenging and time-consuming, often requiring trial and error just to input the data correctly. This process felt inefficient and detracted from the core objectives of the lab. Furthermore, with the workload from other courses, time available for the lab was limited. As a result, we often had to settle for the first set of acceptable results we found, rather than thoroughly exploring for the most accurate or optimal outcomes.
