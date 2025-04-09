@@ -64,6 +64,7 @@ Intensity Graph for Model 2:
 Reliability Graph Prediction (SRTAT):
 
 Reliability Graph Prediction (C-SFRAT):
+![alt text](images/image-10.png)
 
 ## A discussion on decision making given a target failure rate 
 To determine the target failure rate, we utilized the C-SFRAT tool to help predict new testing intervals, and also incorporated the SRTAT tool to estimate the failure rate based on the observed number of failures in our dataset. Using both tools, we calculated the failure rate by dividing the number of failures by the total system operating hours. This metric was essential in assessing how much improvement is needed in the testing process to reduce the failure rate, thereby ensuring greater reliability once the system is deployed to end-users. Our objective was to establish the lowest achievable failure rate to confirm that the reliability of the failure data does not indicate any critical safety risks. Based on predictions from both tools and the intensity graphs referenced earlier, we set a target failure rate of 0.4, which represented the lowest intensity level within the relevant intervals for both top-performing models. With this target in mind, the failure data is expected to reflect a system that performs reliably under testing conditions.
@@ -136,6 +137,16 @@ A significant drawback of the RDC is that it cannot calculate the precise quanti
 In conclusion, while RDC offers a versatile, efficient, and cost-effective way to perform reliability assessments, it does come with limitations related to the precision of the results it provides. It is good for quick assessments and scenarios where a simple pass/fail decision is what we want. 
 
 # Comparison of Results
+
+**Comparison**
+
+In the RDC-11 analysis, three normalized usage unit values were evaluated to determine the minimum acceptable MTTF: 23 seconds (115 input events), 46 seconds (230 input events), and 92 seconds (460 input events), all based on a threshold of 5 allowable failures. The chart corresponding to 46 seconds showed all failure points falling within the green and yellow zones, indicating acceptable reliability performance. In contrast, the 23-second chart, while still within the acceptable range, showed points approaching the boundary of the continue-test region, and the 92-second chart revealed several failure points in the red zone, suggesting that the system could not sustain such a high MTTF. This supports the conclusion that 46 seconds is the minimum MTTF at which the system remains reliably operational under the specified failure constraints. In parallel, the Reliability Growth Testing chart provided a temporal view of system improvement, with failure intensity starting above the target threshold of 0.6 and gradually decreasing. The failure intensity curve (GM model) crossed below the 0.6 threshold at approximately interval 30, confirming that the system's reliability improved with continued testing and design refinement. Together, these numerical results reinforce that while 46 seconds is the optimal MTTFmin under current test conditions, ongoing improvements observed through RGT validate the system’s path to achieving and maintaining that reliability standard.
+
+**When to use each technique**
+
+Reliability Growth Testing (RGT) is done to analyze current reliability. In addition, it can be used to identify and eliminate faults, and forecast future reliability. The reliability figures are compared with intermediate reliability objectives to measure progress so that resources can be directed to achieve the reliability goals in a timely and cost-effective manner. Whenever a failure occurs, an action is executed to remove the problem.
+
+Reliability Demonstration Chart (RDC) is done toward the end of the growth testing period to verify that a specific reliability level (FIO) has been achieved. During this stage, the software code is frozen.
 
 # Discussion on Similarity and Differences of the Two Techniques
 
