@@ -46,7 +46,7 @@ These models use covariates F and C, which may contribute significantly to the f
 
 ## Result of range analysis (an explanation of which part of the data is good for proceeding with the analysis)
 
-In our range analysis, we focused on identifying which portion of the failure data would be most appropriate for model fitting. This involved evaluating how well different models captured the behavior of the failure events across the observed time intervals. We used log-likelihood values as our primary indicator of model performance, aiming to find models that closely fit the failure data. The two models with the highest log-likelihoods—Model TL with covariates F, C and Model GM with covariates F, C (both with a log-likelihood of -59.653)—emerged as the best fits. These models not only align well with the failure distribution but also maintain strong performance in other metrics like AIC, BIC, SSE, and Critic scores. In terms of data range, the dataset included 31 intervals, which represent the number of observed failure events over time. This range allowed us to observe a consistent pattern in the failure rates, providing a stable basis for statistical modeling. The distribution within these 31 intervals appeared to be dense and informative enough for the TL and GM models to capture the underlying failure behavior effectively. Therefore, the range of data used was both statistically sufficient and relevant for conducting meaningful reliability analysis.
+In our range analysis, we focused on identifying which portion of the failure data would be most appropriate for model fitting. This involved evaluating how well different models captured the behavior of the failure events across the observed time intervals. We used log-likelihood values as our primary indicator of model performance, aiming to find models that closely fit the failure data. The two models with the highest log-likelihoods —Model TL with covariates F, C and Model GM with covariates F, C (both with a log-likelihood of -59.653)— emerged as the best fits. These models not only align well with the failure distribution but also maintain strong performance in other metrics like AIC, BIC, SSE, and Critic scores. In terms of data range, the dataset included 31 intervals, which represent the number of observed failure events over time. This range allowed us to observe a consistent pattern in the failure rates, providing a stable basis for statistical modeling. The distribution within these 31 intervals appeared to be dense and informative enough for the TL and GM models to capture the underlying failure behavior effectively. Therefore, the range of data used was both statistically sufficient and relevant for conducting meaningful reliability analysis.
 
 ## Plots for failure rate and reliability of SUT for the test data provided 
 MVF Graph for Model 1:
@@ -61,13 +61,11 @@ MVF Graph for Model 2:
 Intensity Graph for Model 2:
 ![alt text](images\image-9.png)
 
-Reliability Graph Prediction (SRTAT):
-
 Reliability Graph Prediction (C-SFRAT):
 ![alt text](images/image-10.png)
 
 ## A discussion on decision making given a target failure rate 
-To determine the target failure rate, we utilized the C-SFRAT tool to help predict new testing intervals, and also incorporated the SRTAT tool to estimate the failure rate based on the observed number of failures in our dataset. Using both tools, we calculated the failure rate by dividing the number of failures by the total system operating hours. This metric was essential in assessing how much improvement is needed in the testing process to reduce the failure rate, thereby ensuring greater reliability once the system is deployed to end-users. Our objective was to establish the lowest achievable failure rate to confirm that the reliability of the failure data does not indicate any critical safety risks. Based on predictions from both tools and the intensity graphs referenced earlier, we set a target failure rate of 0.4, which represented the lowest intensity level within the relevant intervals for both top-performing models. With this target in mind, the failure data is expected to reflect a system that performs reliably under testing conditions.
+To determine the target failure rate, we utilized the C-SFRAT tool to predict future testing intervals and assess system reliability. This tool allowed us to model and visualize the expected failure intensity based on historical data. The failure rate was estimated using the observed number of failures in conjunction with total system operating hours, as derived from the C-SFRAT outputs. This metric was essential in evaluating how much improvement is required in the testing process to meet reliability expectations before system deployment. The goal was to reach the lowest achievable failure rate, ensuring that the observed failure behavior does not pose any critical safety risks to end-users. Based on the C-SFRAT predictions and the intensity graphs (as shown in the image), we selected a target failure intensity of 0.6. This value represented the minimum observed intensity within the relevant intervals of the top-performing model. By aligning testing efforts with this target, the failure data is expected to reflect a system that meets the required reliability standards under test conditions.
 
 ## A discussion on the advantages and disadvantages of reliability growth analysis 
 
@@ -78,7 +76,6 @@ To determine the target failure rate, we utilized the C-SFRAT tool to help predi
 
 **Disadvantages:**
 
-- Using different tools with the same data brings on different results for the graphs.
 - The prediction models can differ based on the mathematical functions used in determining a target failure for the system.
 - Failure data entry into the Excel files can take a long time to input into the tools for example using the C-SFRAT we had to input the failure data into the Excel file that was already done for us beforehand.
 
@@ -153,7 +150,7 @@ Both reliability growth testing and reliability assessment using RDC are techniq
 
 Similarities
 - Both techniques use failure times and more specifically MTTF to assess the system’s performance and reliability.
-- Failure data is needed for both methods. The same dataset was used as input for both techniques in our testing process.
+- Failure data is needed for both methods.
 - Both methods used to determine whether the system is becoming more reliable over time, either through improved failure trends or a longer MTTF.
 - Both methods requires tools and analysis techniques. Reliability growth testing uses statistical modeling and trend analysis, RDC uses graphical interpretation through tools like RDC-11.
 
