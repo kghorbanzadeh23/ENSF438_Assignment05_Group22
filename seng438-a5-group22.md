@@ -19,11 +19,11 @@ The primary goal of this lab was to introduce us to reliability assessment and d
 
 In this section of the lab assignment, we had to select the best two models using the failure data provided to us the benefit of using the C-SFRAT was that we could simply import the CSV file into this GUI and we could use the functions to determine which fits in well with our data, this feature of Model Results and Predictions it will enable us to narrow which function resembles the closest to the failure data. To approach finding the best two models we select all the possible comparisons we could perform with the covariates. Here we can see all of the models which were selected to see which one would fit the best into our failure data.
 
-![alt text](images\image-3.png)
+![alt text](images/image-3.png)
 To compare these models we selected the Model Comparison tab to present us with a table of all the models, in which we could select the top two models easily.
 
-![alt text](images\image-4.png)
-![alt text](images\image-5.png)
+![alt text](images/image-4.png)
+![alt text](images/image-5.png)
 After analyzing the table, we selected our best-fit models based on log-likelihood values, which reflect how closely a model fits the failure data. A higher (less negative) log-likelihood indicates a better fit. We also considered AIC, BIC, SSE, and Critic scores to support our selection.
 
 **Our two best fit candidates are:**
@@ -50,16 +50,16 @@ In our range analysis, we focused on identifying which portion of the failure da
 
 ## Plots for failure rate and reliability of SUT for the test data provided 
 MVF Graph for Model 1:
-![alt text](images\image-6.png)
+![alt text](images/image-6.png)
 
 Intensity Graph for Model 1:
-![alt text](images\image-7.png)
+![alt text](images/image-7.png)
 
 MVF Graph for Model 2:
-![alt text](images\image-8.png)
+![alt text](images/image-8.png)
 
 Intensity Graph for Model 2:
-![alt text](images\image-9.png)
+![alt text](images/image-9.png)
 
 Reliability Graph Prediction (C-SFRAT):
 ![alt text](images/image-10.png)
